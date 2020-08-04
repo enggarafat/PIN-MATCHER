@@ -12,37 +12,37 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input id="display-random-num" class="form-control" type="text">
+                    <input id="display-random-num" class="form-control generate-value" type="text">
                     <button id = "click-generate" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
-                    <input class="form-control" type="text">
+                    <input  class="form-control showValue" type="text">
                     <div class="numbers">
-                        <div class="calc-body">
+                        <div  class="calc-body"> 
                             <div class="calc-button-row">
-                              <div class="button">7</div>
-                              <div class="button">8</div>
-                              <div class="button">9</div>
+                              <div onclick="showButtonText(this.innerText)" class="button">7</div>
+                              <div onclick="showButtonText(this.innerText)" class="button">8</div>
+                              <div onclick="showButtonText(this.innerText)" class="button">9</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">4</div>
-                              <div class="button">5</div>
-                              <div class="button">6</div>
+                              <div onclick="showButtonText(this.innerText)" class="button">4</div>
+                              <div onclick="showButtonText(this.innerText)" class="button">5</div>
+                              <div onclick="showButtonText(this.innerText)" class="button">6</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">1</div>
-                              <div class="button">2</div>
-                              <div class="button">3</div>
+                              <div onclick="showButtonText(this.innerText)" class="button">1</div>
+                              <div onclick="showButtonText(this.innerText)" class="button">2</div>
+                              <div onclick="showButtonText(this.innerText)" class="button">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button"><</div>
-                                <div class="button">0</div>
-                                <div class="button">C</div>
+                                <div class="button" onclick="removeNumber()"><</div>
+                                <div onclick="showButtonText(this.innerText)" class="button">0</div>
+                                <div class="button" onclick="clearAll()">C</div>
                             </div>
                             <div>
-                                <button type="submit" class="submit-btn">Submit</button>
+                                <button type="submit" class="submit-btn" onclick="submitAction()">Submit</button>
                                 <p class="action-left">3 try left</p>
                             </div>
                     </div>
@@ -50,8 +50,8 @@
             </div>
         </div>
         <div id = "display-notify" class="notify-section">
-            <p class="notify">❌ Pin Didn't Match, Please try again</p>
-            <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            <p class="notify wrong">❌ Pin Didn't Match, Please try again</p>
+            <p class="notify right">✅ Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
     <script src="script.js"></script>
