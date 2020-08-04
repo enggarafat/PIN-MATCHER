@@ -13,6 +13,7 @@ document.getElementById("display-random-num").value = creatRandomNumber;
 //Show input value in input-box
 
 function showButtonText(x){
+
     const inputShower = document.querySelector(".showValue");
     inputShower.value = inputShower.value + x;
     inputShower.style.textAlign ="center";
@@ -22,8 +23,8 @@ function showButtonText(x){
 // submitAction
 
 function submitAction(){
-    const showValue = document.querySelector(".showValue").value;
 
+    const showValue = document.querySelector(".showValue").value;
     const generateValue = document.querySelector(".generate-value").value;
 
     if(showValue == generateValue){
@@ -61,6 +62,7 @@ document.querySelector(".showValue").value = finalValue;
 
 }
 
+// remove all number
 
 function clearAll(){
 
